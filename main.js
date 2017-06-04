@@ -7,12 +7,6 @@
     return;
  }
 
-const electron = require('electron')
-// Module to control application life.
-const app = electron.app
-const {ipcMain} = require('electron')
-var path = require('path')
-
 const {app, BrowserWindow, ipcMain, globalShortcut, clipboard} = require('electron');
 
 const path = require('path');
