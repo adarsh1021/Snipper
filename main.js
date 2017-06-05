@@ -11,7 +11,8 @@ const {app, BrowserWindow, ipcMain, globalShortcut, clipboard} = require('electr
 
 const path = require('path');
 const url = require('url');
-const db = require('./mongohandler');
+// const db = require('./mongohandler');
+const db = require('./nehandler');
 let mainWindow = null;
 let snipWindow = null;
 
