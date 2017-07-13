@@ -11,7 +11,9 @@ function newSnip() {
     const snip = {
         "title": title.value,
         "language": language.value,
-        "code": code.getValue()
+        "code": code.getValue(),
+        "timestamp": Math.floor(Date.now() / 1000),
+        "hotkey": null
     };
     ipcRenderer.send('new-snip-add', JSON.stringify(snip))
 }

@@ -11,7 +11,7 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script>if (window.module) module = window.module;</script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-
+    <script src="./jquery.toaster.js"></script>
 </head>
 <body>
 
@@ -61,12 +61,14 @@
                 <table id="mytable" class="table table-bordred table-striped">
 
                     <thead>
-                    <th>Title</th>
-                    <th>Language</th>
+                    <th> <div class="block">Title</div> <div class="arrow-down block" id="title_show"></div></th>
+                    <th> <div class="block">Language</div> <div class="arrow-down block" id="language_show"></div></th>
+                    <th> <div class="block">Date Modified</div> <div class="arrow-down block" id="timestamp_show"></div></th>
                     <th>Code</th>
                     <th>Edit</th>
                     <th>Delete</th>
                     <th>Copy</th>
+                    <th>HotKey <a href="#" onclick="openhelp()" data-toggle="tooltip" data-placement="top" title="use uncommon key combinations. Click for more!">Help</a></th>
                     </thead>
                     <tbody id="tablebody">
 
@@ -151,6 +153,31 @@
     editor.setTheme("ace/theme/monokai");
     editor.getSession().setMode("ace/mode/javascript");
 </script>
+<style type="text/css">
+    .arrow-up {
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      
+      border-bottom: 5px solid black;
+    }
+    .arrow-down {
+      width: 0; 
+      height: 0; 
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      
+      border-top: 5px solid black;
+    }
+    .block {
+        display: inline-block;
+    }
+    .block:hover {
+        cursor: pointer;
+    }
+
+</style>
 
 </body>
 </html>
